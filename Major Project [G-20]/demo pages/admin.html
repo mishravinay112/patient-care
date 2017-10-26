@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Module</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  #patientLogo
+{
+color:#CD5C5C;
+background:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+#careLogo
+{
+color:white;
+background:#CD5C5C;
+border-radius: 0px 10px 10px 0px;
+}
+
+#logoname:hover > #patientLogo
+{
+background:#CD5C5C;
+color:white;
+}
+#logoname:hover > #careLogo
+{
+background:white;
+color:#CD5C5C;
+}
+  
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+    footer
+ {
+      background-color: #555;
+      color: white;
+      padding: 3px;
+ }
+
+ li,h4,a
+ {
+       color:#CD5C5C;
+}
+
+a
+{
+text-decoration: none;
+}
+  </style>
+</head>
+<body style="font-family: 'Raleway', sans-serif;">
+
+<nav class="navbar navbar-default visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-bottom: 5px;margin-top: 0px;">
+       
+          <span id="logoname"><span id="patientLogo">MEDICAL</span><span id="careLogo">CARD</span> <br>
+					<span style="font-size: 75%;color:#CD5C5C">The Future of Healthcare</span>
+			
+      </a>
+    </div>
+    <div class="collapse navbar-collapse text-center" id="myNavbar">
+      <ul class="nav navbar-nav">
+         <div class="well">
+        <li><a href="#"> <img src="profile.jpg" class="img-responsive img-thumbnail" height="100" width="100" alt="Vinay Mishra"></a></li>
+          <p><h4><a href="#" style="color:#CD5C5C">Vinay Mishra</a></h4></p>
+            <p><h6><a href="#" style="color:#CD5C5C">Administrator</a></h6></p>
+             <button type="button" class="btn btn-success btn-xs"><a href="#" style="color:white">logout</a></button>
+         </div>
+        <li><button type="button" style="background:none;border:none;"  ><img src="add.jpg" class="img-responsive img-thumbnail" height="50" width="50" alt="Add user"></button></li>
+        <li>Add User</li>
+         <li><button type="button" style="background:none;border:none;" ><img src="view.ico" class="img-responsive img-thumbnail" height="50" width="50" alt="view user"></button></li>
+        <li>View User</li>
+         <li><button type="button" style="background:none;border:none;"  ><img src="update.png" class="img-responsive img-thumbnail" height="50" width="50" alt="update user"></button></li>
+        <li>Update User</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs text-center">
+      <a href="#" style="text-decoration:none;">
+      <h4>
+          <span id="logoname"><span id="patientLogo">MEDICAL</span><span id="careLogo">CARD</span> <br>
+					<span style="font-size: 75%;color:#CD5C5C">The Future of Healthcare</span>
+				</h4>
+      </a>
+      <ul class="nav nav-pills nav-stacked">
+         <div class="well">
+        <li> <a href="#"> <img src="profile.jpg" class="img-responsive img-thumbnail" height="100" width="100" alt="Admin Image"></a></li>
+         <p class="divider"></p>
+            <p><h4><a href="#" style="color:#CD5C5C">Vinay Mishra</a></h4></p>
+            <p><h6><a href="#" style="color:#CD5C5C">Administrator</a></h6></p>
+           <button type="button" class="btn btn-success btn-xs"><a href="#" style="color:white">logout</a></button>
+         </div>
+          <div class="well">
+        <li><button type="button" style="background:none;border:none;" ><img src="add.jpg" class="img-responsive img-thumbnail" height="50" width="50" alt="Add user"></button></li>
+        <li>Add User</li>
+         <li><button type="button" style="background:none;border:none;" ><img src="view.ico" class="img-responsive img-thumbnail" height="50" width="50" alt="view user"></button></li>
+        <li>View User</li>
+         <li><button type="button" style="background:none;border:none;"  ><img src="update.png" class="img-responsive img-thumbnail" height="50" width="50" alt="update user"></button></li>
+        <li>Update User</li>
+          </div>
+          
+          
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Dashboard</h4>
+        <p>Welcome to the India's most sophesticated E-Helath System.</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Doctors</h4>
+            <p>1024+</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Care Teams</h4>
+            <p>100345+</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Patients</h4>
+            <p>1 Million+</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Administrators</h4>
+            <p>21</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <marquee direction="up">
+            <p><a href="#">Dr. John</a><br>  i am facing problem to change password, please help!!!</p> 
+            <p><a href="#">Dr. Shruti</a><br>Thank you :-)</p> 
+            <p><a href="#">Dr. Shrivastav</a><br> "Where to find list of new list of medicines??"</p> 
+            </marquee>
+            <p><button type="button" class="btn btn-success btn-xs"><a href="#" style="color:white">more</a></button></p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p><a href="#">Ravindra Rajpoot</a><br> it is showing error when i upload my x-ray report.</p> 
+            <p><a href="#">Rajkumar Pandey</a><br> Thanks for enable my account again.</p> 
+           <p><button type="button" class="btn btn-success btn-xs"><a href="#" style="color:white">more</a></button></p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Care Team : <a href="#">Alfa</a><br>need to change team members.</p> 
+            <p>Care Team : <a href="#">Jayram</a><br>I added 67 new medicines.</p> 
+           <p><button type="button" class="btn btn-success btn-xs"><a href="#" style="color:white">more</a></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>1 New admin <a href="#">Vivesh Singh</a> added today</p> 
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+<footer class="container-fluid text-center">
+  <p><a href="https://www.facebook.com/mishravinay112" style="color:silver; text-decoration: none;">2017 &copy SVITS INDORE.</a></p>
+</footer>
+</body>
+</html>

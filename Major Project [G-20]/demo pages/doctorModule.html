@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Doctor Module</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>    
+   
+#patientLogo
+{
+color:#CD5C5C;
+background:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+#careLogo
+{
+color:white;
+background:#CD5C5C;
+border-radius: 0px 10px 10px 0px;
+}
+
+#logoname:hover > #patientLogo
+{
+background:#CD5C5C;
+color:white;
+}
+#logoname:hover > #careLogo
+{
+background:white;
+color:#CD5C5C;
+}
+   
+footer
+ {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+ }
+.nav.navbar-nav.navbar-right li a {
+    color:#CD5C5C;
+}
+.nav.navbar-nav li a
+ {
+       color:#CD5C5C;
+}
+  </style>
+</head>
+<body style="font-family: 'Raleway', sans-serif;">
+
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="text-decoration: none;" href="#">
+        <h4 style="margin-right: 10px;margin-left: 10px;">
+          <span id="logoname"><span id="patientLogo">MEDICAL</span><span id="careLogo">CARD</span> <br>
+					<span style="font-size: 75%;color:#CD5C5C">The Future of Healthcare</span>
+				</h4>
+      </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+	         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CareTeam<span class="caret"></span></a>
+          	<ul class="dropdown-menu" role="menu">
+              <li><a href="#">Create CareTeam</a></li>
+               <li><a href="#">Manage CareTeam</a></li>
+	            <li><a href="#">View CareTeam</a></li>
+            </ul>
+	      </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Give Suggestion<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">CareTeam</a></li>
+            <li><a href="#">Patient</a></li>
+            <li><a href="#">Doctor</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Patient History</a></li>
+        <li><a href="#">on Leave</a></li>
+         <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-envelope"></span> <span class="badge"> 1 </span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="divider"></li>
+            <li><a href="#"><a href="#">Mr. Ram</a><br>Thank you doctor:-)</a></li>
+            <li class="divider"></li>
+            
+          </ul>
+         </li>
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-bell"></span> <span class="badge"> 1 </span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="divider"></li>
+            <li><a href="#"><a href="#">careTeam</a><br> There is an emergency in ward 5</a></li>
+            <li class="divider"></li>
+          </ul>
+         </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="	glyphicon glyphicon-off"></span> Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+        <img src="drTiju.png" class="img-responsive img-thumbnail" height="100" width="100" alt="Tiju Cherian">
+        <p class="divider"></p>
+            <p><h4><a href="#" style="color:#CD5C5C">Dr. Tiju Cherian</a></h4></p>
+             <p><h6><a href="#" style="color:#CD5C5C">Addiction psychiatrist</a></h6></p>
+      </div>
+      <div class="well">
+      <ul class="nav" style="color:#CD5C5C">
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon glyphicon-home"></span></li></a><li>Dashboard</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-info-sign"></span></li></a><li>Important Date</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-send"></span></li></a><li>Send Messege</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="	glyphicon glyphicon-comment"></span></li></a><li>Post Messege</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-plus-sign"></span></li></a><li>Add Patient</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-user"></span></li></a><li>View Patient</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-erase"></span></li></a><li>New Medicines</li>
+        <li><a href="#" style="color:#CD5C5C"><span class="glyphicon glyphicon-folder-open"></span></li></a><li>Personal Files</li>
+         
+      </ul>
+       </div>
+      
+      <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+        <p><strong> Congrates Dr.Tiju!</strong></p>
+        You have successfully treated 100K+ patients.
+      </div>
+     
+    </div>
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+             <p contenteditable="false"><h1 >Good Morning <span style="color:#CD5C5C">Dr. Tiju!</span></h1></p>
+              Thanks for being here-Have a nice day.   
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+  <span style="font-size: 25px; background-color: #F3F5F6; padding: 0 10px;">
+    4 March 2017
+  </span>
+</div>
+<br>
+      <div class="row">
+
+        
+      
+         <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs" >done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient A</a></a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+      
+      <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient B</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+         <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient C</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+        
+
+ 
+
+ <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient D</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+         
+
+         <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient E</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+
+         <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient F</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+         <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient G</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+    </div>
+      
+
+       <div class="row">
+         <div class="col-sm-12">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Dr. Priyanka</p>
+           <img src="drPriyanka.png" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>sir i need your help for patient <a href="#" style="color:#CD5C5C">145670349</a></p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+<div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Dr. Pratibha</p>
+           <img src="drPratibha.png" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Thank you sir for your help:-)</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+ <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+  <span style="font-size: 25px; background-color: #F3F5F6; padding: 0 10px;">
+    3 March 2017
+  </span>
+</div>
+<br>
+      
+    
+      <div class="row">
+        
+
+     <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient C</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+          <div class="col-sm-3 alert fade in">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close"><button class="btn btn-success btn-xs">done</button></a>
+            <div class="thumbnail">
+              <p>Important</p>
+              <p><strong><a href="#">Patient I</a></strong></p>
+              <p>Problem Desc</p>
+              <button class="btn btn-primary">Info</button>
+            </div>   
+         </div>
+
+          <div class="col-sm-12">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Anja Medical Store </p>
+           <img src="pharmacist.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Sir your adviced new medicines will be available from tommorow to our store.</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+
+ <div class="row">
+         <div class="col-sm-12">
+           <div class="well">
+             <p><button class="btn btn-success btn-sm">Load More</button></p>
+           </div>
+         </div>
+   </div>
+    </div>
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p>Important Today</p>
+        <p><strong>W.H.O. Seminar</strong></p>
+        <p>6:30 pm</p>
+         <button class="btn btn-primary">Info</button>
+       
+      </div>      
+      <div class="well">
+        <p>Conference</p>
+        <p><strong><span class="glyphicon glyphicon-remove"></span> National Health Program </strong></p>
+        <p>28 Feb 2017</p>
+      </div>
+      <div class="well">
+        <p><strong><span class="glyphicon glyphicon-check"></span> Meeting to Dr. S.P. Jain</strong></p>
+        <p>21 Feb 2017</p>
+      </div>
+
+      
+         
+           <div class="well">
+             <p><button class="btn btn-success btn-sm">Load More</button></p>
+           </div>
+        
+   </div>
+    </div>
+    </div>
+    
+    
+   </div>
+  </div>
+  
+</div>
+
+<footer class="container-fluid text-center">
+  <p><a href="https://www.facebook.com/mishravinay112" style="color:silver; text-decoration: none;">2017 &copy SVITS INDORE.</a></p>
+</footer>
+
+</body>
+</html>
