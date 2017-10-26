@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Medical Card Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <!-- Load jQuery JS -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- Load jQuery UI Main JS  -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+     function readURL(input) 
+     {
+	        if (input.files && input.files[0]) 
+          {
+	            var reader = new FileReader();
+	            reader.onload = function (e)
+               {
+	                $('#patientImage')
+	                    .attr('src', e.target.result)
+	                    .width(150)
+	                    .height(200);
+	            };
+
+	            reader.readAsDataURL(input.files[0]);
+	        }
+	    }
+       $( function() {$( "#datepicker" ).datepicker({ maxDate:0,changeMonth:true,changeYear:true,dateFormat: 'dd/mm/yy' });});
+  </script>
+  <style>
+    body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+    </style>
+  </head>
+
+  <body background="background.jpg">
+
+    <div class="container">
+<div class="panel panel-default text-center ">
+  <div class="panel-body">
+      <form class="form-signin" action="#" method="POST">
+        <h2 class="form-signin-heading text-center" >
+          <span style="text-decoration: underline;color:rgb(14, 118, 189);">MEDICAL</span><span style="color: #CD5C5C;text-decoration: underline;">-CARD</span>
+      <br>
+       <span  style="color: #CD5C5C;font-size: 45%;">THE FUTURE OF HEALTHCARE</span>
+        </h2>
+         <div class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+        Invalid email or password.
+      </div>
+        <label for="Role" class="sr-only">Role</label>
+         <select class="form-control" id="Role" name="role">
+        <option>Admin</option>
+        <option>CareTeam</option>
+         <option>Doctor</option>
+          <option>Patient</option>
+          <option>Pharmacist</option>
+      </select><br>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+	<span style="color:#999">Not registered yet? </span>
+	<button type="button" class="btn btn-xs" style="background-color:#CD5C5C;color:white;" data-toggle="modal" data-target="#registerForm">register now</button>
+	 </div>
+  <div class="panel-footer">
+    <marquee> <a href="http://www.svvv.edu.in/">If you do not have an account, please contact the admin or call at <b style="color:#CD5C5C;">9179874953</b></a></marquee>
+  </div>
+</div>
+
+
+<div id="registerForm" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">
+           <h2 class="form-signin-heading text-center" >
+          <span style="text-decoration: underline;color:rgb(14, 118, 189);">MEDICAL</span><span style="color: #CD5C5C;text-decoration: underline;">-CARD</span>
+     
+        </h4>
+      </div>
+      <div class="modal-body">
+      
+       
+            <form action="register" method="post" id="registerForm" role="form">
+            <fieldset>
+
+              <div class="form-group">
+				          <label for="upload-photo"><img id="patientImage" alt="User Image" src="img/notavailable.png" style="border: 1px solid; border-radius: 5%; max-height: 100px; max-width: 100px; min-height: 100px; min-width: 100px;" /></label>
+                  	<input type="file" path="patientImageFile" id="upload-photo" onchange="readURL(this);" style="display:none;" />
+              </div>
+        
+
+               <div class="form-group"> 	 
+                <label for="firstname"><span class="req">* </span> First name: </label>
+                    <input class="form-control" type="text" name="firstname" id = "txt" onchange = "Validate(this)" required="required" /> 
+                        <div id="errFirst"></div>    
+            </div>
+
+            <div class="form-group">
+                <label for="lastname"><span class="req">* </span> Last name: </label> 
+                    <input class="form-control" type="text" name="lastname" id = "txt" onchange = "Validate(this)"  required="required" />  
+                        <div id="errLast"></div>
+            </div>
+
+             <div class="form-group">
+                <label for="gender"><span class="req">* </span>Gender: </label><br>
+                    <label class="radio-inline"><input type="radio" name="gender" value="male" required="required">Male</label><br>
+                    <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+             </div>
+
+            <div class="form-group">
+              <label for="datepicker"><span class="req">* </span> Date of birth: </label>
+               <input type="text" class="form-control" id="datepicker" required="required" />
+          </div>
+
+            <div class="form-group">
+            <label for="phonenumber"><span class="req">* </span> Mobile Number: </label>
+                    <input required type="number" name="phonenumber" id="phone" class="form-control phone" min="7000000000" max="9999999999"/> 
+                     <div class="phone_status" id="phone_status"></div>
+            </div>
+
+           <div class="form-group">
+             <label for="Role"><span class="req">* </span>Role: </label>
+         <select class="form-control" id="Role" name="role" >
+        <option value="admin">Admin</option>
+        <option value="care_team">CareTeam</option>
+         <option value="doctor">Doctor</option>
+          <option value="patient" selected="selected" >Patient</option>
+          <option value="pharmacist" >Pharmacist</option>
+      </select>
+       
+           </div>
+
+            <div class="form-group">
+                <label for="email"><span class="req">* </span> Email Address: </label> 
+                    <input class="form-control" required type="text" name="email" id = "email"  onchange="email_validate(this.value);" />   
+                        <div class="status" id="status"></div>
+            </div>
+
+             <div class="form-group">
+                <label for="pass1"><span class="req">* </span> Password: </label>
+                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> </p>
+
+                <label for="pass2"><span class="req">* </span> Password Confirm: </label>
+                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"   id="pass2" onkeyup="checkPass(); return false;" />
+                        <span id="confirmMessage" class="confirmMessage"></span>
+            </div>
+
+            <!--div class="form-group">
+                <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label> 
+                    <input class="form-control" type="text" name="username" id = "txt" onkeyup = "Validate(this)" placeholder="minimum 6 letters" required />  
+                        <div id="errLast"></div>
+            </div-->
+
+           
+
+            <div class="form-group">
+            
+               
+
+                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+            </div>
+                      <h5>You will receive an email to complete the registration and validation process. </h5>
+                      <h5>Be sure to check your spam folders. </h5>
+ 
+
+            </fieldset>
+            </form><!-- ends register form -->
+
+<script type="text/javascript">
+  document.getElementById("field_terms").setCustomValidity("Please  accept the Terms and Conditions");
+</script>
+<script>
+
+  function Role(role)
+{
+  alert("here");
+  if(role!='patient')
+  {
+     document.getElementById("role").style.display='block';
+     alert("show");
+  }
+  else
+  {
+    document.getElementById("role").style.display='none';
+    alert("hide");
+  }
+}
+
+
+  function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+} 
+
+
+
+// validates text only
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+}
+// validate email
+function email_validate(email)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    return false;
+    }
+    else
+    {
+    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}
+// validate date of birth
+/*function dob_validate(dob)
+{
+var regDOB = /^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/;
+
+    if(regDOB.test(dob) == false)
+    {
+    document.getElementById("statusDOB").innerHTML	= "<span class='warning'>DOB is only used to verify your age.</span>";
+    }
+    else
+    {
+    document.getElementById("statusDOB").innerHTML	= "<span class='valid'>Thanks, you have entered a valid DOB!</span>";	
+    }
+}*/
+// validate address
+function add_validate(address)
+{
+var regAdd = /^(?=.*\d)[a-zA-Z\s\d\/]+$/;
+  
+    if(regAdd.test(address) == false)
+    {
+    document.getElementById("statusAdd").innerHTML	= "<span class='warning'>Address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("statusAdd").innerHTML	= "<span class='valid'>Thanks, Address looks valid!</span>";	
+    }
+}
+  </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    </div> <!-- /container -->
+
+
+   
+  </body>
+</html>
+

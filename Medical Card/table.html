@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+	var myapp = angular.module('MyModule', []).controller('MyController',
+			function($scope, $http) {
+
+				$scope.doctor = 0;
+				$scope.care_team = 0;
+				$scope.patient = 0;
+				$scope.pharmacist = 0;
+        
+				$scope.users=[
+
+          {"entry_time":"2017-04-27 14:44:20.0","role":"admin","gender":"male","name":"Amit jaju","mobile":"8765432109","id":"amitjaju18042017","age":"0","email":"amitjaju9@gmail.com","status":"1"},
+          {"role":"doctor","gender":"male","name":"Mr.Gaurav Vinchurkar","mobile":"9826751413","id":"mr.gauravvinchurkar28101987","age":"29","email":"gvinchurkar11@gmail.com","status":"0"},
+          {"entry_time":"2017-04-27 15:37:00.0","role":"admin","gender":"male","name":"navin jain","mobile":"9876543210","id":"navinjain06081990","age":"26","email":"jainnavin614@gmail.com","status":"0"},
+          {"role":"patient","gender":"female","name":"PARIDHI UNDE","mobile":"9926182504","id":"paridhiunde24091995","age":"21","email":"paridhiunde@gmail.com","status":"0"},
+          {"role":"doctor","gender":"female","name":"shreya soni","mobile":"9876543219","id":"shreyasoni29051995","age":"21","email":"shreya.pachmadhi@gmail.com","status":"0"},{"entry_time":"2017-04-29 17:37:00.0","role":"pharmacist","gender":"male","name":"Vinay Mishra","mobile":"9179874953","id":"vinaymishra24081993","age":"23","email":"mishravinay112@gmail.com","status":"0"}
+        ];
+			
+       $scope.parJson = function (json) {
+        return JSON.parse(json);
+    }
+				/* 
+				$scope.myfunction = function(d,c,pt,ph)
+				{
+				    alert("---> " + d +" "+ c +" "+ pt +" "+ ph +" ");
+				    $scope.doctor=d;
+					$scope.care_team=c;
+					$scope.patient=pt;
+					$scope.pharmacist=ph;
+				}; */
+			});
+</script>
+</head>
+<body ng-controller="MyController">
+<div > 
+
+
+
+</div>
+
+
+<div class="container">
+  <h2>Table</h2>
+  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>                                                                                      
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Photo</th>
+        <th>Name</th>
+         <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Registration Date</th>
+        <th>mobile</th>
+        <th>Role</th>
+        <th>Status</th>
+           
+      </tr>
+    </thead>
+   <tbody>
+      <tr ng-repeat="u in users">
+        <td><img src="{{$index+1}}"></td>
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.age}}</td>
+        <td>{{u.gender}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.entry_time}}</td>
+        <td>{{u.mobile}}</td>
+        <td>{{u.role}}</td>
+        <td>{{u.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+</html>

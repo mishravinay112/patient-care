@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pharmacy Module</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+    
+  #patientLogo
+{
+color:#CD5C5C;
+background:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+#careLogo
+{
+color:white;
+background:#CD5C5C;
+border-radius: 0px 10px 10px 0px;
+}
+
+#logoname:hover > #patientLogo
+{
+background:#CD5C5C;
+color:white;
+}
+#logoname:hover > #careLogo
+{
+background:white;
+color:#CD5C5C;
+}
+  
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+   footer
+ {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+ }
+
+ li,h4,a
+ {
+       color:#CD5C5C;
+}
+
+a
+{
+text-decoration: none;
+}
+
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    
+    
+   
+   
+
+/* Remove the jumbotron's default bottom margin */ 
+  .jumbotron 
+  {
+  background: url('') no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top:20%;
+  margin-top:-21%;
+  margin-bottom: 1%;
+  height: 30%;
+  /*z-index:-100;*/
+  
+}
+
+.input-group 
+{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-top: 5%;
+     margin-bottom: 5%;
+    width:80%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    z-index: 2;
+    margin-left: -57%;
+}
+
+.container {
+   z-index:2;
+}
+
+/*@media (max-width: 317px) {
+  .btn-responsive {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+}*/
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-bottom: 15px;margin-top: 0px;">
+          <span id="logoname"><span id="patientLogo">MEDICAL</span><span id="careLogo">CARD</span> <br>
+					<span style="font-size: 75%;color:#CD5C5C">The Future of Healthcare</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Dealers</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Patient</a></li>
+        <li><a href="#">Doctor</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> </a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>&nbsp;Priyanka Chouhan<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="	glyphicon glyphicon-off"></span> Log Out</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Orders&nbsp;<span class="badge"> 1 </span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+  <div class="col-md-12 text-center">
+    <form class="navbar-form" role="search" >
+      <div class="input-group add-on input-lg">
+        <input type="text" class="form-control " placeholder="Search" name="srch-term" id="srch-term" width="100px;">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+    </form> 
+    </div>
+  </div> 
+</div>
+
+ 
+
+<div class="container">  
+  <div class="well">
+
+  <a href="#" class="btn btn-default btn-md"><span class"glyphicon glyphicon-plus"></span>add</a></div>
+   <div class="table-responsive">          
+  <table class="table table-hover table-bordered">
+    <thead style="background-color: #CD5C5C;">
+      <tr style="color:#f1f1f1">
+
+        <th>Date </th> 
+        <th>Time</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Medicine[Qty.]</th>
+        <th>Discount</th>
+        <th>Total Amount</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>26/03/2017</td>
+        <td> 14:44:59</td>
+        <td>12345678987654</td>
+        <td>Mr. Mohammad Ali</td>
+        <td>3</td>
+        <td>12</td>
+        <td>&#8377;4567.098</td>
+        <td><a href="#" title="update"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="delete"><span class="	glyphicon glyphicon-remove"></span></a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3" style="margin-left:7%;">
+      <div class="btn-group"> 
+        <a href="#" class="btn btn-primary" style="width:40%;height:86px;"><img src="d1.jpg" class="img-responsive" style="width:100%;" alt="Dr. James cooper" title="Dr. James cooper"></a>
+          <div type="button" class="btn btn-default" style="width:60%;height:86px;">
+            <p> 3 medicine<br>&#8377;4567.098</p>
+            <span style="margin-left:-5px;width:80%;overflow: hidden;">
+              <a href="#" class="btn btn-success btn-xs">more</a>
+              <a href="#" class="btn btn-warning btn-xs">change</a>
+              <a href="#" class="btn btn-danger btn-xs">return</a>
+            </span>
+          </div> 
+        </div>
+    </div>
+
+    <div class="col-sm-3"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading"><a href="#">Mr. James White</a> </div>
+        <div class="panel-body"><img src="p1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading"><a href="#">Mrs. rose white</a></div>
+        <div class="panel-body"><img src="p3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="#">Mrs. Kate Willium</a></div>
+        <div class="panel-body"><img src="p4.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="#">Dr. Jack Sparrow</a></div>
+        <div class="panel-body"><img src="d2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="#">Dr. Willium Tunner</a></div>
+        <div class="panel-body"><img src="d3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p><a href="https://www.facebook.com/mishravinay112" style="color:silver; text-decoration: none;">2017 &copy SVITS INDORE.</a></p>
+</footer>
+
+</body>
+</html>

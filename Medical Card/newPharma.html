@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pharmacy Module</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script>
+
+  var myapp=angular.module("myModule",[]).controller("myController",
+  function($scope)
+  {
+      var buyer=[
+                  {date:"28/03/2017",time:"14:07:56",id:"1234567890",name:"Mr. Mohammad Ali",medicine:"5",discount:"13",amount:"2345.98"},
+                  {date:"28/03/2017",time:"11:07:56",id:"1234534567",name:"Mr. Ram Singh",medicine:"50",discount:"23",amount:"5345.98"},
+                  {date:"27/03/2017",time:"04:07:56",id:"1298769039",name:"Mrs. Namita Sharma",medicine:"3",discount:"53",amount:"345.90"},
+                  {date:"26/03/2017",time:"22:17:56",id:"3456678443",name:"Dr. Vipul Shah",medicine:"1",discount:"3",amount:"5.98"},
+                  {date:"26/03/2017",time:"14:07:56",id:"9876542213",name:"Mr. mohin Ali",medicine:"9",discount:"43",amount:"4590.98"},
+                  {date:"26/03/2017",time:"04:07:56",id:"5647288284",name:"Mr. Hashim Amla",medicine:"7",discount:"18",amount:"1234.98"},
+                  {date:"25/03/2017",time:"18:07:56",id:"8968454454",name:"Mr. Brush lee",medicine:"2",discount:"3",amount:"234.45"},
+                  {date:"25/03/2017",time:"15:07:56",id:"3433254552",name:"Ms. Neeti Bhagnani",medicine:"45",discount:"83",amount:"1345.48"},
+                  {date:"25/03/2017",time:"12:07:56",id:"1452454445",name:"Ms. Disha Patni",medicine:"59",discount:"73",amount:"12945.93"},
+                  {date:"23/03/2017",time:"14:07:56",id:"5525233555",name:"Mr. Tiger Shroff",medicine:"9",discount:"23",amount:"4567.98"},
+                  {date:"22/03/2017",time:"11:07:56",id:"5432244525",name:"Mr. Ronak Roshan",medicine:"1",discount:"1",amount:"24.98"},
+                  {date:"22/03/2017",time:"10:07:56",id:"1445454545",name:"Mr. Osho Patil",medicine:"2",discount:"93",amount:"9876.98"},
+                  {date:"21/03/2017",time:"23:07:56",id:"4154554543",name:"Ms. Shradhdha Kapoor",medicine:"3",discount:"23",amount:"987.80"},
+                  {date:"21/03/2017",time:"21:07:56",id:"2445425334",name:"Mr. Raj Dilwala",medicine:"50",discount:"15",amount:"1234.98"},
+                  {date:"21/03/2017",time:"19:07:56",id:"5234545554",name:"Mr. Rajesh Tripathi",medicine:"15",discount:"18",amount:"0998.98"},
+                  {date:"21/03/2017",time:"12:07:56",id:"1131341233",name:"Mr. Swananad Kirkire",medicine:"5",discount:"19",amount:"1111.98"}
+                  
+        
+
+      ];
+      $scope.buyer=buyer;
+  });
+  </script>
+  <style>
+
+    
+  #patientLogo
+{
+color:#CD5C5C;
+background:white;
+border-radius: 10px 0px 0px 10px;
+}
+
+#careLogo
+{
+color:white;
+background:#CD5C5C;
+border-radius: 0px 10px 10px 0px;
+}
+
+#logoname:hover > #patientLogo
+{
+background:#CD5C5C;
+color:white;
+}
+#logoname:hover > #careLogo
+{
+background:white;
+color:#CD5C5C;
+}
+  
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+   footer
+ {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+ }
+
+ li,h4,a
+ {
+       color:#CD5C5C;
+}
+
+a
+{
+text-decoration: none;
+}
+
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    
+    
+   
+   
+
+
+/*@media (max-width: 317px) {
+  .btn-responsive {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+}*/
+
+
+
+  </style>
+</head>
+<body ng-app="myModule">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-bottom: 15px;margin-top: 0px;">
+          <span id="logoname"><span id="patientLogo">MEDICAL</span><span id="careLogo">CARD</span> <br>
+					<span style="font-size: 75%;color:#CD5C5C">The Future of Healthcare</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Dealers</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Patient</a></li>
+        <li><a href="#">Doctor</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> </a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>&nbsp;Priyanka Chouhan<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="	glyphicon glyphicon-off"></span> Log Out</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Orders&nbsp;<span class="badge"> 1 </span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+ 
+
+<div class="container" ng-controller="myController">  
+     
+      <div class="well">
+      
+        
+       
+       <div class="input-group col-lg-12" >      
+          <div class="input-group-addon" >
+              <select id="protocol">
+                <option>Search</option>
+                <option>Id//</option>
+             </select>
+          </div>
+         <input type="text" class="form-control" id="domain" aria-describedby="protocol" ng-model="searchText">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+             <div class="input-group-btn">
+                <a href="#" class="btn btn-md" style="background-color: #CD5C5C;color: #f1f1f1" >add New &oplus;</a>
+            </div>
+      </div>
+     
+    </div>
+
+
+      <div class="table-responsive" >          
+          <table class="table table-hover table-bordered">
+             <thead style="background-color: #CD5C5C;">
+              <tr style="color:#f1f1f1">
+                    <th>Date </th> 
+                    <th>Time</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Medicine[Qty.]</th>
+                    <th>Discount</th>
+                    <th>Total Amount</th>
+                    <th>Action</th>
+              </tr>
+             </thead>
+              <tbody>
+                   <tr ng-repeat="b in buyer | filter:searchText">
+                    <td>{{b.date}}</td>
+                    <td>{{b.time}}</td>
+                    <td>{{b.id}}</td>
+                    <td>{{b.name}}</td>
+                    <td>{{b.medicine}}</td>
+                    <td>{{b.discount}}</td>
+                    <td>&#8377;{{b.amount}}</td>
+                    <td><a href="#" title="update"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="delete"><span class="	glyphicon glyphicon-remove"></span></a></td>
+                  </tr>
+              </tbody>
+          </table>
+       </div>
+    </div>
+
+
+  
+    
+
+<footer class="container-fluid text-center">
+  <p><a href="https://www.facebook.com/mishravinay112" style="color:silver; text-decoration: none;">2017 &copy SVITS INDORE.</a></p>
+</footer>
+
+</body>
+</html>
